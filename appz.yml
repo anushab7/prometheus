@@ -1,7 +1,7 @@
 app:
     name: prometheus
     code: prometheus
-    notify: appzdev@cloudbourne.co
+    notify: aborra@ecloudcontrol.com
 
 build:
     version: 2.17
@@ -11,7 +11,7 @@ build:
     image_template: prometheus-2.17
 
 deploy:
-    context: alpha/DEV
+    context: anushab7/DEV
     type: statefulset
     replicas: 1
     port:
@@ -21,7 +21,7 @@ volumes:
   - claim: prometheus-data
     mount: /appz/data
     name: data
-    size: 50Gi
+    size: 25Gi
   
 properties:
     revision : 54
